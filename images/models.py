@@ -16,6 +16,4 @@ class Images(models.Model):
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.image
 # Create your models here.
