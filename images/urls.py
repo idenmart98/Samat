@@ -1,6 +1,6 @@
-from django.contrib import admin
-from django.urls import path,include
+from .views import ImageView
+from django.urls import path
 
 urlpatterns = [
-
+    path('images/', ImageView.as_view()),
 ]

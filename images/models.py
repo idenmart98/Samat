@@ -1,4 +1,5 @@
 from django.db import models
+import django_filters
 from django.db.models.lookups import StartsWith
 
 SITE = "SITE"
@@ -10,10 +11,11 @@ STATUS_CHOICES = (
     (GALLERY, "GAllery"),
     (KARUSEL, "Karusel"),
 )
+
 class Images(models.Model):
     image = models.ImageField(upload_to='images')
     status=models.CharField(max_length=10, choices=STATUS_CHOICES, default=SITE)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
 
-# Create your models here.
+
