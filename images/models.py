@@ -1,5 +1,4 @@
 from django.db import models
-import django_filters
 from django.db.models.lookups import StartsWith
 
 SITE = "SITE"
