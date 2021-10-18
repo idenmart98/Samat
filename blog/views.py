@@ -7,6 +7,6 @@ from .serializers import PostSerializers
 
 class PostView(APIView):
     def get(self, request, format=None):
-        image = Post.objects.filter(status='SITE')
-        serializer = PostSerializers(image, many=True)
+        status = Post.objects.filter(status='SITE')
+        serializer = PostSerializers(status, many=True)
         return Response(serializer.data)
